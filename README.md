@@ -117,6 +117,7 @@ Please keep the following limitations in mind:
 
 **BA6003 Group 5**  
 Course project: Corporate Innovation Investment Performance Prediction and Decision Support System.
+Mainly contributed by Ma Lumiao and Ding Liuyuan, who constructed the basic structure, operate the dashboard, write the readme instructure, and complete the AI tools.
 
 ## Disclaimer
 
