@@ -9,6 +9,8 @@ dependencies = [
     "matplotlib",
     "statsmodels",
     "openpyxl",
+    "streamlit",
+    "plotly",
 ]
 
 [dependency-groups]
