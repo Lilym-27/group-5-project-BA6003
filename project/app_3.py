@@ -1201,3 +1201,52 @@ with st.expander("About this prototype and its limitations"):
     )
 
 st.caption("Innovation IQ · BA6003 Group 5 · Educational decision-support prototype")
+
+
+# ==============================================================================
+# 10 / AGENTIC WORKFLOW (Week 11 Integration)
+# ==============================================================================
+st.markdown('---')
+st.markdown('<div class="section-kicker">10 / Agentic Workflow</div>', unsafe_allow_html=True)
+st.header("COO Autonomous Risk Agent")
+st.caption(
+    "An autonomous AI agent that calls 6 analytical tools, runs multiple iterations of reasoning, "
+    "and produces a deep-dive structured risk report."
+)
+
+# Add a small panel for UX
+st.markdown(
+    '<div class="ai-panel"><b>From dashboard to agentic reasoning</b><br>'
+    '<span style="color:#63748b">Unlike the AI Summary above which reads current screen data, '
+    'this Agent autonomously queries the database, identifies risks, and writes a multi-section report.</span></div>',
+    unsafe_allow_html=True,
+)
+
+if st.button("🎯 Generate Deep-Dive COO Report", type="primary"):
+    import sys
+    from pathlib import Path
+    
+    # Safely inject the agent path
+    _agent_dir = Path(__file__).resolve().parent.parent / "agent"
+    if str(_agent_dir) not in sys.path:
+        sys.path.insert(0, str(_agent_dir))
+    
+    try:
+        # Import your tools and agent
+        import tools as agent_tools
+        from coo_agent import run_coo_report_agent
+        
+        # Pass the dashboard's current dataframe to your agent tools!
+        # This ensures the agent respects the sidebar filters the user selected.
+        agent_tools.df_global = filtered_df 
+        
+        with st.spinner("Agent is autonomously querying tools and generating report (approx. 60s)..."):
+            report = run_coo_report_agent()
+            
+        st.markdown(report)
+        st.caption("AI-generated risk report. Autonomously generated via multi-turn tool calling.")
+        
+    except Exception as exc:
+        st.error(f"Agent execution failed: {exc}")
+        import traceback
+        st.code(traceback.format_exc())
