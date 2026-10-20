@@ -37,7 +37,6 @@ The dashboard is designed for analysis and educational decision support. Its sta
 ## Repository Structure
 
 ```text
-.
 
 .
 ├── agent/                       # AI agent components
