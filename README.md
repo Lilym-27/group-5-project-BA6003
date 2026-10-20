@@ -1,4 +1,4 @@
-# Corporate Innovation Investment Performance Prediction and Decision Support System
+﻿# Corporate Innovation Investment Performance Prediction and Decision Support System
 
 **BA6003 Group 5**
 
@@ -26,42 +26,42 @@ The dashboard is designed for analysis and educational decision support. Its sta
 
 ## Technology Stack
 
-- **Python** — data processing and statistical analysis
-- **Streamlit** — interactive web application
-- **Plotly** — interactive charts
-- **pandas / NumPy** — data manipulation
-- **statsmodels** — ordinary least squares (OLS) regression
-- **uv** — Python project and dependency management
-- **OpenRouter / OpenAI-compatible Python client** — optional AI-assisted analysis
+- **Python** 鈥?data processing and statistical analysis
+- **Streamlit** 鈥?interactive web application
+- **Plotly** 鈥?interactive charts
+- **pandas / NumPy** 鈥?data manipulation
+- **statsmodels** 鈥?ordinary least squares (OLS) regression
+- **uv** 鈥?Python project and dependency management
+- **OpenRouter / OpenAI-compatible Python client** 鈥?optional AI-assisted analysis
 
 ## Repository Structure
 
 ```text
 
 .
-├── agent/                       # AI agent components
-│   ├── coo_agent.py
-│   ├── README.md
-│   ├── streamlit_app.py
-│   └── tools.py
-├── charts/                      # Data analysis charts
-├── project/
-│   ├── app.py                   # Earlier dashboard version
-│   ├── app_3.py                 # Main Streamlit application
-│   └── app_new.py               # Alternative dashboard version
-├── src/
-│   └── week8_demo/              # Week 8 demonstration code
-├── test/
-│   ├── test_calculations.py     # Calculation tests
-│   └── test_validation.py       # Data validation tests
-├── findings.md                  # Analysis findings
-├── Sample.xlsx                  # Input dataset
-├── week7_analysis.py            # Week 7 analysis script
-├── week8_function_validation.py  # Week 8 functions and validation
-├── pyproject.toml               # Project metadata and dependencies
-├── uv.lock                      # Locked dependency versions
-├── .gitignore                   # Excludes secrets and local artifacts
-└── README.md                    # Project documentation
+鈹溾攢鈹€ agent/                       # AI agent components
+鈹?  鈹溾攢鈹€ coo_agent.py
+鈹?  鈹溾攢鈹€ README.md
+鈹?  鈹溾攢鈹€ streamlit_app.py
+鈹?  鈹斺攢鈹€ tools.py
+鈹溾攢鈹€ charts/                      # Data analysis charts
+鈹溾攢鈹€ project/
+鈹?  鈹溾攢鈹€ app.py                   # Earlier dashboard version
+│   ├── appfinal.py              # Main Streamlit application
+鈹?  鈹斺攢鈹€ app_new.py               # Alternative dashboard version
+鈹溾攢鈹€ src/
+鈹?  鈹斺攢鈹€ week8_demo/              # Week 8 demonstration code
+鈹溾攢鈹€ test/
+鈹?  鈹溾攢鈹€ test_calculations.py     # Calculation tests
+鈹?  鈹斺攢鈹€ test_validation.py       # Data validation tests
+鈹溾攢鈹€ findings.md                  # Analysis findings
+鈹溾攢鈹€ Sample.xlsx                  # Input dataset
+鈹溾攢鈹€ week7_analysis.py            # Week 7 analysis script
+鈹溾攢鈹€ week8_function_validation.py  # Week 8 functions and validation
+鈹溾攢鈹€ pyproject.toml               # Project metadata and dependencies
+鈹溾攢鈹€ uv.lock                      # Locked dependency versions
+鈹溾攢鈹€ .gitignore                   # Excludes secrets and local artifacts
+鈹斺攢鈹€ README.md                    # Project documentation
 
 ```
 
@@ -111,6 +111,17 @@ uv run streamlit run project/appfinal.py
 
 Streamlit will print a local URL in the terminal. Open that URL in your browser to use the dashboard.
 
+
+## Testing
+
+Run the automated tests from the repository root:
+
+```bash
+uv run pytest -v
+```
+
+The tests cover financial metric calculations, missing-value handling, zero-denominator handling, and data validation.
+
 ## Methodology and Interpretation
 
 The application uses historical company data to explore relationships among innovation inputs and firm performance. The scenario estimate uses a multivariate OLS specification with R&D intensity and patent count as explanatory variables for Tobin's Q.
@@ -139,7 +150,7 @@ Please keep the following limitations in mind:
 
 Our project was developed through several stages, from initial topic selection and system design to dashboard development, statistical analysis, AI integration, and portfolio monitoring. The following timeline summarizes the responsibilities and contributions of each team member throughout the project.
 
-### Week 1 — Topic Selection and Initial Project Proposal
+### Week 1 鈥?Topic Selection and Initial Project Proposal
 
 **All team members: Ma Lumiao, Ding Liuyuan, and Yang Ruoyu**
 
@@ -150,9 +161,9 @@ Our project was developed through several stages, from initial topic selection a
 - Ma Lumiao and Ding Liuyuan uploaded the finalized submission after reviewing and improving the initial draft.
 
 
-### Week 2 — Foundational System Development, Data Cleaning, and Analytical Framework
+### Week 2 鈥?Foundational System Development, Data Cleaning, and Analytical Framework
 
-**Ding Liuyuan — Foundational System Development and Analytical Visualization**
+**Ding Liuyuan 鈥?Foundational System Development and Analytical Visualization**
 
 - Established the foundational structure of the project system and uploaded the initial implementation to the group's GitHub repository.
 - Designed and developed the initial system framework to support subsequent analytical and dashboard development.
@@ -160,29 +171,29 @@ Our project was developed through several stages, from initial topic selection a
 - Developed the initial analytical framework for examining the relationship between corporate innovation investment and firm performance.
 - Organized the early project workflow and established the technical foundation for subsequent development.
 
-**Ma Lumiao — Data Cleaning and System Framework Refinement**
+**Ma Lumiao 鈥?Data Cleaning and System Framework Refinement**
 
 - Conducted data cleaning to improve the quality, consistency, and usability of the dataset for subsequent analysis.
 - Contributed suggestions and improvements to the initial system structure, helping refine the foundational framework established during this stage.
 - Reviewed the initial system design and provided recommendations to improve its organization and support subsequent development.
 - Collaborated on refining the project's analytical preparation and data presentation.
 
-**Yang Ruoyu — Weekly Submission**
+**Yang Ruoyu 鈥?Weekly Submission**
 
 - Submitted the required project form for the week.
-### Week 3 — Testing and Data Validation
+### Week 3 鈥?Testing and Data Validation
 
-**Ma Lumiao and Ding Liuyuan — Testing**
+**Ma Lumiao and Ding Liuyuan 鈥?Testing**
 
 - Worked on the initial testing activities to check the functionality and consistency of the early project components.
 - Reviewed the initial implementation and helped identify issues requiring further development.
 
-**Yang Ruoyu — Validation**
+**Yang Ruoyu 鈥?Validation**
 
 - Took responsibility for the data validation component.
 - Worked on checking the validity and consistency of the relevant data used by the system.
 
-### Week 4 — Initial Dashboard Development and Visualization Framework
+### Week 4 鈥?Initial Dashboard Development and Visualization Framework
 
 **Primary Contributor: Ma Lumiao**
 
@@ -203,11 +214,11 @@ During Week 4, Ma Lumiao took the lead in developing the initial version of the 
 - **Foundation for subsequent functionality:** Structured the initial dashboard so that additional analytical features, more detailed visualizations, interactive controls, and AI-assisted analysis could be incorporated during later development stages.
 
 The initial dashboard developed by Ma Lumiao served as the starting point for the subsequent evolution of the application. In the following stage, Ding Liuyuan and Ma Lumiao continued to enhance the dashboard by improving its interface, expanding its analytical functionality, integrating the AI Investment Analyst, and introducing additional scenario-based analysis and supporting documentation.
-### Week 5 — Dashboard Enhancement, AI Integration, and System Finalization
+### Week 5 鈥?Dashboard Enhancement, AI Integration, and System Finalization
 
 During this stage, Ma Lumiao and Ding Liuyuan worked collaboratively to expand the dashboard's functionality, improve the user experience, integrate AI-assisted analysis, and prepare the application and supporting materials for demonstration.
 
-**Ding Liuyuan — AI Integration and Analytical Functionality**
+**Ding Liuyuan 鈥?AI Integration and Analytical Functionality**
 
 - Integrated the AI Investment Analyst feature into the dashboard, enabling users to obtain supplementary AI-generated analysis of corporate innovation investment and financial performance.
 - Configured the OpenRouter API integration and the associated environment-variable settings.
@@ -219,7 +230,7 @@ During this stage, Ma Lumiao and Ding Liuyuan worked collaboratively to expand t
 - Improved API error handling and logging to make the AI feature easier to troubleshoot.
 - Refined the application code and supporting configuration to improve the overall completeness and usability of the system.
 
-**Ma Lumiao — Dashboard Refinement and Final Version Development**
+**Ma Lumiao 鈥?Dashboard Refinement and Final Version Development**
 
 - Continued developing the initial dashboard into a more complete and polished application.
 - Refined the dashboard layout, visual hierarchy, and presentation of key performance indicators.
@@ -227,7 +238,7 @@ During this stage, Ma Lumiao and Ding Liuyuan worked collaboratively to expand t
 - Enhanced the overall user experience and presentation of the dashboard.
 - Integrated the dashboard improvements into the evolving application and contributed to preparing the final version for demonstration.
 
-**Joint Contributions — Documentation, Repository Management, and Project Presentation**
+**Joint Contributions 鈥?Documentation, Repository Management, and Project Presentation**
 
 Ma Lumiao and Ding Liuyuan also worked together on the following tasks:
 
@@ -239,7 +250,7 @@ Ma Lumiao and Ding Liuyuan also worked together on the following tasks:
 
 The resulting dashboard combines interactive visualizations, statistical analysis, scenario-based estimation, and AI-assisted interpretation in a unified decision-support interface.
 
-### Final Stage — Portfolio Monitoring System
+### Final Stage 鈥?Portfolio Monitoring System
 
 **Primary contributor: Yang Ruoyu**
 
@@ -267,3 +278,4 @@ The Tobin's Q scenario estimates are based on historical statistical relationshi
 ## Disclaimer
 
 This project is developed for academic and exploratory decision-support purposes. It is not investment advice, and model outputs should not be used as the sole basis for investment decisions.
+
