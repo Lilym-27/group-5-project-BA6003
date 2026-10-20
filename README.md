@@ -38,14 +38,32 @@ The dashboard is designed for analysis and educational decision support. Its sta
 
 ```text
 .
+
+.
+├── agent/                       # AI agent components
+│   ├── coo_agent.py
+│   ├── README.md
+│   ├── streamlit_app.py
+│   └── tools.py
+├── charts/                      # Data analysis charts
 ├── project/
-│   └── app.py                    # Streamlit dashboard
-├── Sample.xlsx                   # Input dataset (if provided locally)
-├── pyproject.toml                # Project metadata and dependencies
-├── uv.lock                       # Locked dependency versions
-├── .env                          # Local API configuration; do not commit
-├── .gitignore                    # Excludes secrets and local artifacts
-└── README.md
+│   ├── app.py                   # Earlier dashboard version
+│   ├── app_3.py                 # Main Streamlit application
+│   └── app_new.py               # Alternative dashboard version
+├── src/
+│   └── week8_demo/              # Week 8 demonstration code
+├── test/
+│   ├── test_calculations.py     # Calculation tests
+│   └── test_validation.py       # Data validation tests
+├── findings.md                  # Analysis findings
+├── Sample.xlsx                  # Input dataset
+├── week7_analysis.py            # Week 7 analysis script
+├── week8_function_validation.py  # Week 8 functions and validation
+├── pyproject.toml               # Project metadata and dependencies
+├── uv.lock                      # Locked dependency versions
+├── .gitignore                   # Excludes secrets and local artifacts
+└── README.md                    # Project documentation
+
 ```
 
 Other analysis scripts, validation files, charts, and project documentation may also be present in the repository.
@@ -89,7 +107,7 @@ Replace the example key with your own key. Never commit `.env`, paste API keys i
 From the repository root, run:
 
 ```bash
-uv run streamlit run project/app_3.py
+uv run streamlit run project/appfinal.py
 ```
 
 Streamlit will print a local URL in the terminal. Open that URL in your browser to use the dashboard.
