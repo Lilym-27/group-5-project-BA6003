@@ -89,7 +89,7 @@ Replace the example key with your own key. Never commit `.env`, paste API keys i
 From the repository root, run:
 
 ```bash
-uv run streamlit run project/app.py
+uv run streamlit run project/app_3.py
 ```
 
 Streamlit will print a local URL in the terminal. Open that URL in your browser to use the dashboard.
@@ -132,7 +132,6 @@ Our project was developed through several stages, from initial topic selection a
 - Ma Lumiao and Ding Liuyuan subsequently revised, refined, and substantially added and developed the content, translated it into English, and completed the final English version of the proposal.
 - Ma Lumiao and Ding Liuyuan uploaded the finalized submission after reviewing and improving the initial draft.
 
-### Week 2 — Foundational System Development and Analytical Framework
 
 ### Week 2 — Foundational System Development, Data Cleaning, and Analytical Framework
 
